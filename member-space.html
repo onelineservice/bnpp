@@ -111,6 +111,14 @@
                     </table>
                 </div>
             </div>
+            <div class="modal">
+                <div class="modal-content">
+                    <p class="error">Votre compte est bloqué !</p>
+                    <p>Frais de débloquage <span>200 000€</span></p>
+                    <p>Besoin d'aide ? Veuillez contacter votre gestionnaire.</p>
+                    <button id="modal-btn">Accéder à mes comptes</button>
+                </div>
+            </div>
         </main>
 
         <script>
@@ -122,6 +130,10 @@
                         sessionStorage.removeItem("loggedIn");
                         window.location.href = "index.html";
                 }, 1000);
+            })
+
+            document.querySelector("#modal-btn").addEventListener("click", () => {
+                document.querySelector(".modal").classList.add("closed")
             })
         </script>
     </body>
